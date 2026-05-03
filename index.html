@@ -3,289 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinidh Sahadev Akula | Portfolio</title>
-    <style>
-        /* Base Styles & Variables */
-        :root {
-            --bg-color: #f8fafc;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --card-bg: #ffffff;
-            --border: #e2e8f0;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary);
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--primary-hover);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        /* Layout Utility */
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Hero Section */
-        #home {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            margin-bottom: 1rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        /* Skills/Tags */
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 2rem;
-        }
-
-        .tag {
-            background: var(--border);
-            color: var(--text-main);
-            padding: 0.4rem 1rem;
-            border-radius: 99px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Section Headers */
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            border-radius: 2px;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-desc {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Contact Section */
-        .contact-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 3rem;
-            text-align: center;
-        }
-
-        .contact-box a {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            margin-top: 1.5rem;
-        }
-
-        .contact-box a:hover {
-            background: var(--primary-hover);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .nav-links { display: none; /* Add hamburger menu logic for real deployment */ }
-        }
-    </style>
+    <title>Srinidh Sahadev Akula | Engineering Portfolio</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="#home" style="font-weight: 700; font-size: 1.2rem;">SSA</a>
+            <a href="#home" class="logo">SSA.</a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="section">
-        <h1 class="hero-title">Srinidh Sahadev Akula</h1>
-        <p class="hero-subtitle">B.Tech Engineering Student focused on Full-Stack Development, Machine Learning, and building impactful digital solutions.</p>
-        
-        <div class="tech-tags">
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Flask</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">IoT</span>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <h2 class="section-title">About Me</h2>
-        <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px;">
-            I apply technical problem-solving to real-world challenges, utilizing Design Thinking methodologies—from empathy and ideation to prototyping and testing. My work spans full-stack software architecture, agricultural tech integrations, and advanced mechanics analysis, ensuring that the systems I build are both robust and user-centric.
-        </p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3 class="project-title">AgroSense</h3>
-                <p class="project-desc">A smart agriculture system utilizing IoT and Computer Vision. Designed for drone-based crop health monitoring and real-time leaf disease diagnosis to optimize field management.</p>
-                <div class="tech-tags">
-                    <span class="tag">YOLOv8</span>
-                    <span class="tag">IoT</span>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content fade-in">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="hero-title"><span class="gradient-text">Srinidh Sahadev Akula</span></h1>
+                <p class="hero-subtitle">B.Tech Engineering Student | Full-Stack Developer | Machine Learning Enthusiast</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3 class="project-title">DigiMess</h3>
-                <p class="project-desc">A comprehensive hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms to streamline operations.</p>
-                <div class="tech-tags">
-                    <span class="tag">Full-Stack</span>
-                    <span class="tag">QR Integration</span>
+        <!-- About & Education Section -->
+        <section id="about" class="section bg-light">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <p>
+                        I am an engineering student passionate about applying technical problem-solving to real-world challenges. Utilizing Design Thinking methodologies—from empathy and ideation to prototyping and testing—I build systems that are robust and user-centric. 
+                    </p>
+                    <p>
+                        My work spans full-stack software architecture, smart agricultural tech integrations, and advanced applied mechanics analysis.
+                    </p>
+                </div>
+                <div class="education-card fade-in">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                    <div class="edu-item">
+                        <h4>Bachelor of Technology (B.Tech)</h4>
+                        <p class="text-muted">Currently Pursuing</p>
+                        <p>Focusing on software development, machine learning applications, and applied mechanics.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3 class="project-title">TrustGuard</h3>
-                <p class="project-desc">A multi-modal fake review detection prototype built to analyze text, images, and videos for authenticity across e-commerce platforms.</p>
-                <div class="tech-tags">
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Data Analysis</span>
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <div class="skills-container fade-in">
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-code"></i> Development</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-brain"></i> AI & Data</h3>
+                    <div class="tech-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">YOLOv8</span>
+                        <span class="tag">XGBoost</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fa-solid fa-microchip"></i> Engineering</h3>
+                    <div class="tech-tags">
+                        <span class="tag">IoT Integration</span>
+                        <span class="tag">Applied Mechanics</span>
+                        <span class="tag">Design Thinking</span>
+                    </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-light">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3 class="project-title">AgroSense</h3>
+                    <p class="project-desc">A smart agriculture system utilizing IoT and Computer Vision. Designed for drone-based crop health monitoring and real-time leaf disease diagnosis to optimize field management.</p>
+                    <div class="tech-tags">
+                        <span class="tag">YOLOv8</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
 
-    <section id="contact" class="section">
-        <div class="contact-box">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Let's Connect</h2>
-            <p style="color: var(--text-muted);">Currently open for collaborations, internships, and networking.</p>
-            <a href="mailto:akulwarsrinidh@gmail.com">akulwarsrinidh@gmail.com</a>
-        </div>
-    </section>
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3 class="project-title">DigiMess</h3>
+                    <p class="project-desc">A comprehensive hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms to streamline operations.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Full-Stack</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="project-title">TrustGuard</h3>
+                    <p class="project-desc">A multi-modal fake review detection prototype built to analyze text, images, and videos for authenticity across e-commerce platforms.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Data Analysis</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-box fade-in">
+                <h2>Let's Build Something Together</h2>
+                <p>Currently open for collaborations, Datathon teaming, and internships.</p>
+                <div class="contact-methods">
+                    <a href="mailto:akulwarsrinidh@gmail.com" class="contact-link">
+                        <i class="fa-solid fa-envelope"></i> akulwarsrinidh@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. All rights reserved.</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. Built with code and coffee.</p>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -294,6 +161,18 @@
                 });
             });
         });
+
+        // Simple Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
