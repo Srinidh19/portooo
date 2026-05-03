@@ -1,126 +1,400 @@
-/* --- Modern Theme Variables --- */
+/* =========================================
+   1. CSS Variables & Theming
+========================================= */
 :root {
-    --primary: #2563eb;
-    --primary-soft: rgba(37, 99, 235, 0.1);
-    --accent: #06b6d4;
-    --text-dark: #0f172a;
-    --text-light: #64748b;
+    /* Light Theme Colors */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    
+    --accent-blue: #2563eb;
+    --accent-blue-hover: #1d4ed8;
+    --accent-cyan: #06b6d4;
+    
     --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(226, 232, 240, 0.8);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="dark"] {
-    --glass-bg: rgba(15, 23, 42, 0.7);
+    /* Dark Theme Colors */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    
+    --accent-blue: #3b82f6;
+    --accent-blue-hover: #60a5fa;
+    --accent-cyan: #22d3ee;
+    
+    --glass-bg: rgba(30, 41, 59, 0.7);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --text-dark: #f8fafc;
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Layout Essentials --- */
+/* =========================================
+   2. Base Resets & Typography
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
+/* =========================================
+   3. Utilities & Glassmorphism
+========================================= */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    box-shadow: var(--glass-shadow);
+}
+
 .text-gradient {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* --- Refined Hero --- */
+.text-accent {
+    color: var(--accent-blue);
+}
+
+/* Background Sectioning */
+.section { padding: 8rem 0; }
+.bg-alt { background-color: var(--bg-secondary); }
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 99px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-sm { padding: 0.5rem 1.2rem; font-size: 0.9rem; }
+
+.btn-primary {
+    background: var(--accent-blue);
+    color: #ffffff;
+    border: none;
+}
+.btn-primary:hover {
+    background: var(--accent-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary, .btn-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--glass-border);
+}
+.btn-secondary:hover, .btn-outline:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan));
+    z-index: 9999;
+    transition: width 0.1s ease-out;
+}
+
+/* =========================================
+   4. Header & Navigation
+========================================= */
+.glass-nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+}
+
+.nav-links a:not(.btn):hover { color: var(--accent-blue); }
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* =========================================
+   5. Hero Section
+========================================= */
 .hero {
-    padding: 12rem 0 8rem 0;
-    text-align: center;
-    background: radial-gradient(circle at top right, var(--primary-soft), transparent);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 6rem;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    top: 20%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw; height: 60vw;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(50px);
 }
 
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: var(--primary-soft);
-    color: var(--primary);
-    border-radius: 99px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-}
-
-/* --- Skills Cards --- */
-.skills-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.skill-box {
-    padding: 3rem 2rem;
     background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    border-radius: 24px;
-    transition: all 0.3s ease;
-}
-
-.skill-box i {
-    font-size: 2rem;
-    color: var(--primary);
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
-.skill-box:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-}
-
-/* --- Modern Project Cards --- */
-.projects-modern-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-}
-
-.project-glass-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-.project-image-placeholder {
-    height: 200px;
-    background: linear-gradient(45deg, #e2e8f0, #cbd5e1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
     font-weight: 800;
-    color: var(--text-light);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 1rem;
 }
 
-.project-info {
-    padding: 2rem;
+.hero-typing {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    height: 3rem; /* Prevents layout shift */
 }
 
-.project-tag {
-    font-size: 0.75rem;
+.cursor {
+    display: inline-block;
+    width: 3px; background: var(--accent-blue);
+    animation: blink 1s infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.hero-cta { display: flex; gap: 1rem; }
+
+/* =========================================
+   6. Sections General
+========================================= */
+.section-header { margin-bottom: 4rem; }
+.section-label {
+    color: var(--accent-cyan);
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--primary);
-    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block; margin-bottom: 0.5rem;
+}
+.section-title { font-size: 2.5rem; font-weight: 800; }
+
+/* =========================================
+   7. About & Timeline
+========================================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-.project-meta {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
+.about-text p {
+    font-size: 1.1rem; color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.timeline { border-left: 2px solid var(--glass-border); padding-left: 2rem; }
+
+.timeline-item {
+    position: relative;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 2rem; left: -2.6rem;
+    width: 1rem; height: 1rem;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-blue);
+    border-radius: 50%;
+}
+
+.timeline-item h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+
+/* =========================================
+   8. Skills Grid
+========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-card {
+    padding: 2.5rem;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: var(--accent-cyan);
+    margin-bottom: 1.5rem;
+}
+
+.skill-card h3 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+
+/* =========================================
+   9. Projects Grid
+========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    padding: 2.5rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.15);
+}
+
+.card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.project-icon { font-size: 2rem; color: var(--accent-blue); }
+.card-link { font-size: 1.5rem; color: var(--text-muted); }
+.card-link:hover { color: var(--text-main); }
+
+.project-title { font-size: 1.5rem; margin-bottom: 1rem; }
+.project-desc { color: var(--text-muted); margin-bottom: 2rem; }
+
+/* Tags */
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+    background: var(--bg-primary);
+    color: var(--accent-cyan);
+    padding: 0.4rem 1rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid var(--glass-border);
+}
+
+/* =========================================
+   10. Contact & Footer
+========================================= */
+.contact-box {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.contact-box h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+.contact-box p { color: var(--text-muted); margin-bottom: 2.5rem; }
+
+footer {
+    text-align: center; padding: 2rem;
     border-top: 1px solid var(--glass-border);
-    font-size: 0.85rem;
-    color: var(--text-light);
+    color: var(--text-muted); font-size: 0.9rem;
 }
 
-/* --- Dark Mode Overrides --- */
-[data-theme="dark"] .project-image-placeholder {
-    background: linear-gradient(45deg, #1e293b, #334155);
+/* =========================================
+   11. Animations & Responsive
+========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .hero-cta { flex-direction: column; }
+    .nav-links { display: none; } /* Hide text links on mobile */
+    .theme-btn { display: block; }
 }
