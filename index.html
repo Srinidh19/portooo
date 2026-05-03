@@ -1,196 +1,387 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinidh Sahadev Akula | Portfolio</title>
+    <title>Srinidh Sahadev Akula | Engineering & AI Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Clean, readable system-like font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- Interactive Background -->
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
     <nav>
-        <div class="nav-container">
-            <a href="#home" class="logo">Srinidh.</a>
+        <div class="nav-container fade-in-nav">
+            <a href="#home" class="logo">SSA<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
+                <a href="#about" class="hover-link">About</a>
+                <a href="#skills" class="hover-link">Skills</a>
+                <a href="#projects" class="hover-link">Projects</a>
+                <a href="#contact" class="hover-link">Contact</a>
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
                 </button>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Header / Hero -->
-        <header id="home" class="hero section">
-            <div class="hero-content">
-                <h1 class="title">Srinidh Sahadev Akula</h1>
-                <h2 class="subtitle">B.Tech Engineering Student specializing in Full-Stack Software, Machine Learning, and IoT Integrations.</h2>
-                <div class="button-group">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="mailto:akulwarsrinidh@gmail.com" class="btn btn-secondary">Contact Me</a>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content fade-in-up">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> System Online
+                </div>
+                <h1 class="hero-title animated-gradient">Srinidh Sahadev Akula</h1>
+                <h2 class="hero-typing">
+                    Architecting <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <p class="hero-subtitle">B.Tech Engineering Student bridging the gap between Full-Stack Systems, Machine Learning Intelligence, and Real-World Hardware.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-glow">Initialize Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-outline">Establish Contact</a>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <!-- About & Education -->
-        <section id="about" class="section bg-alt">
-            <div class="section-header">
-                <h2>About Me</h2>
-            </div>
-            <div class="grid-2">
-                <div class="text-block">
-                    <p>I am an engineering student dedicated to applying technical problem-solving to real-world challenges. Using Design Thinking methodologies, I aim to build systems that are robust and genuinely useful.</p>
-                    <p>My academic and practical work spans software architecture, smart agricultural technology, and applied mechanics, giving me a broad perspective on how software interacts with the physical world.</p>
+        <!-- About & Education Timeline Section -->
+        <section id="about" class="section">
+            <h2 class="section-title fade-in-up">System <span class="highlight">Overview</span></h2>
+            <div class="about-grid">
+                <div class="about-text glass-panel fade-in-up">
+                    <p>
+                        I engineer solutions at the intersection of software and physical reality. By leveraging Design Thinking methodologies—from deep empathy and ideation to rapid prototyping—I build robust, user-centric systems capable of solving complex problems.
+                    </p>
+                    <p>
+                        My technical foundation spans full-stack software architecture, smart agricultural IoT integrations, and advanced applied mechanics. Whether optimizing a neural network for real-time inference or analyzing structural nodes, my focus remains on scalable, impactful engineering.
+                    </p>
                 </div>
-                <div class="card">
-                    <h3><i class="fa-solid fa-graduation-cap icon"></i> Education</h3>
-                    <div class="list-item">
-                        <h4>Bachelor of Technology (B.Tech)</h4>
-                        <p class="text-light">Currently Pursuing</p>
-                        <p>Focus: Software systems, Machine Learning, and Applied Mechanics.</p>
+                
+                <div class="timeline glass-panel fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Bachelor of Technology (B.Tech)</h4>
+                            <p class="text-accent"><i class="fa-solid fa-satellite-dish"></i> Active Connection</p>
+                            <p>Specializing in software development, machine learning applications, and applied mechanical systems.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Datathon 2026</h4>
+                            <p class="text-muted"><i class="fa-solid fa-database"></i> Executed</p>
+                            <p>Architected data-driven models and presentation strategies for complex, high-stakes problem statements.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Skills -->
+        <!-- Skills Section -->
         <section id="skills" class="section">
-            <div class="section-header">
-                <h2>Technical Skills</h2>
-            </div>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Software Dev</h3>
-                    <div class="tags">
+            <h2 class="section-title fade-in-up">Core <span class="highlight">Protocols</span></h2>
+            <div class="skills-container">
+                <div class="skill-category glass-panel tilt-card fade-in-up" style="animation-delay: 0.1s;">
+                    <h3><i class="fa-solid fa-terminal text-accent"></i> Development Logic</h3>
+                    <div class="tech-tags">
                         <span class="tag">Python</span>
                         <span class="tag">JavaScript</span>
                         <span class="tag">Flask</span>
-                        <span class="tag">Full-Stack</span>
+                        <span class="tag">Full-Stack Architecture</span>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>AI & Data</h3>
-                    <div class="tags">
+                <div class="skill-category glass-panel tilt-card fade-in-up" style="animation-delay: 0.2s;">
+                    <h3><i class="fa-solid fa-network-wired text-accent"></i> Artificial Intelligence</h3>
+                    <div class="tech-tags">
                         <span class="tag">Machine Learning</span>
+                        <span class="tag">Computer Vision</span>
                         <span class="tag">YOLOv8</span>
                         <span class="tag">XGBoost</span>
-                        <span class="tag">Computer Vision</span>
+                        <span class="tag">EfficientNet</span>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>Engineering</h3>
-                    <div class="tags">
-                        <span class="tag">IoT Integrations</span>
+                <div class="skill-category glass-panel tilt-card fade-in-up" style="animation-delay: 0.3s;">
+                    <h3><i class="fa-solid fa-microchip text-accent"></i> Applied Hardware</h3>
+                    <div class="tech-tags">
+                        <span class="tag">IoT Integration</span>
                         <span class="tag">Applied Mechanics</span>
-                        <span class="tag">Design Thinking</span>
+                        <span class="tag">Analytical Chemistry</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects -->
-        <section id="projects" class="section bg-alt">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-            </div>
-            <div class="grid-3">
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title fade-in-up">Deployed <span class="highlight">Architectures</span></h2>
+            <div class="projects-grid">
                 
-                <div class="card project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-leaf icon-large"></i>
-                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3>AgroSense</h3>
-                    <p>A smart agriculture system utilizing IoT and Computer Vision for drone-based crop health monitoring and real-time leaf disease diagnosis.</p>
-                    <div class="tags">
-                        <span class="tag">YOLOv8</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="card project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-utensils icon-large"></i>
-                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3>DigiMess</h3>
-                    <p>A hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms.</p>
-                    <div class="tags">
-                        <span class="tag">Flask</span>
-                        <span class="tag">JavaScript</span>
+                <div class="project-card glass-panel tilt-card fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fa-solid fa-drone"></i></div>
+                            <div class="card-links"><i class="fa-brands fa-github hover-link"></i></div>
+                        </div>
+                        <h3 class="project-title">AgroSense Platform</h3>
+                        <p class="project-desc">A smart agriculture ecosystem utilizing IoT and Computer Vision. Engineered for drone-based crop health telemetry and real-time leaf disease diagnosis.</p>
+                        <div class="tech-tags">
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Python</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card project-card">
-                    <div class="project-header">
-                        <i class="fa-solid fa-shield-check icon-large"></i>
-                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                    <h3>TrustGuard</h3>
-                    <p>A multi-modal machine learning prototype designed to analyze and verify the authenticity of text, images, and videos for e-commerce.</p>
-                    <div class="tags">
-                        <span class="tag">ML Models</span>
-                        <span class="tag">Data Analysis</span>
+                <div class="project-card glass-panel tilt-card fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fa-solid fa-qrcode"></i></div>
+                            <div class="card-links"><i class="fa-brands fa-github hover-link"></i></div>
+                        </div>
+                        <h3 class="project-title">DigiMess Engine</h3>
+                        <p class="project-desc">A high-throughput hostel dining management platform integrating QR-based attendance protocols and live crowd monitoring algorithms.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
                     </div>
                 </div>
 
+                <div class="project-card glass-panel tilt-card fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="card-links"><i class="fa-brands fa-github hover-link"></i></div>
+                        </div>
+                        <h3 class="project-title">TrustGuard</h3>
+                        <p class="project-desc">A multi-modal machine learning prototype built to parse and verify the authenticity of text, images, and videos across digital commerce networks.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-box glass-panel fade-in-up">
+                <div class="contact-bg-glow"></div>
+                <h2>Ready to Initialize Collaboration?</h2>
+                <p>Currently accepting pings for Datathon teaming, integrations, and high-impact internships.</p>
+                <div class="contact-methods">
+                    <a href="mailto:akulwarsrinidh@gmail.com" class="contact-link hover-link">
+                        <i class="fa-solid fa-envelope"></i> akulwarsrinidh@gmail.com
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <h2>Get in Touch</h2>
-            <p>Open for collaborations, Datathon teams, and internships.</p>
-            <a href="mailto:akulwarsrinidh@gmail.com" class="email-link">akulwarsrinidh@gmail.com</a>
-        </div>
-        <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula.</p>
+    <footer>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. System Nominally Configured.</p>
     </footer>
 
+    <!-- Vanilla Tilt JS for 3D Cards -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    
+    <!-- Core Interactions -->
     <script>
-        // Theme Toggle Logic
-        const themeBtn = document.getElementById('theme-toggle');
-        const themeIcon = themeBtn.querySelector('i');
-        
-        // Load saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        updateIcon(savedTheme);
+        /* --- 1. Custom Cursor --- */
+        const cursorDot = document.getElementById("cursor-dot");
+        const cursorOutline = document.getElementById("cursor-outline");
 
-        themeBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
+        window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Add a slight delay for the outline for a fluid feel
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
         });
 
-        function updateIcon(theme) {
-            if(theme === 'dark') {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
+        // Expand cursor on interactive elements
+        const hoverLinks = document.querySelectorAll('.hover-link, .btn, .tag');
+        hoverLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorOutline.style.backgroundColor = 'rgba(14, 165, 233, 0.1)';
+            });
+            link.addEventListener('mouseleave', () => {
+                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorOutline.style.backgroundColor = 'transparent';
+            });
+        });
+
+        /* --- 2. Neural Network Canvas Background --- */
+        const canvas = document.getElementById('network-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, particles;
+
+        function initCanvas() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            particles = [];
+            const particleCount = window.innerWidth < 768 ? 40 : 80;
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    radius: Math.random() * 2 + 1
+                });
             }
         }
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        let mouse = { x: null, y: null };
+        window.addEventListener('mousemove', (e) => { mouse.x = e.x; mouse.y = e.y; });
+        window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
+        window.addEventListener('resize', initCanvas);
+
+        function animateCanvas() {
+            requestAnimationFrame(animateCanvas);
+            ctx.clearRect(0, 0, width, height);
+            
+            // Determine line color based on theme
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            const nodeColor = isDark ? 'rgba(56, 189, 248, 0.5)' : 'rgba(37, 99, 235, 0.3)';
+            const lineColor = isDark ? '14, 165, 233' : '37, 99, 235';
+
+            for (let i = 0; i < particles.length; i++) {
+                let p = particles[i];
+                p.x += p.vx; p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = nodeColor;
+                ctx.fill();
+
+                for (let j = i + 1; j < particles.length; j++) {
+                    let p2 = particles[j];
+                    let dist = Math.sqrt(Math.pow(p.x - p2.x, 2) + Math.pow(p.y - p2.y, 2));
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.strokeStyle = `rgba(${lineColor}, ${1 - dist / 120})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                }
+
+                // Mouse interaction
+                if (mouse.x != null) {
+                    let distMouse = Math.sqrt(Math.pow(p.x - mouse.x, 2) + Math.pow(p.y - mouse.y, 2));
+                    if (distMouse < 150) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(${lineColor}, ${0.5 - distMouse / 300})`;
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        initCanvas();
+        animateCanvas();
+
+        /* --- 3. Theme Toggle --- */
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        
+        themeToggleBtn.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            let newTheme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            themeIcon.className = newTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        });
+
+        /* --- 4. Typing Effect --- */
+        const words = ["Machine Learning Models.", "IoT Integrations.", "Full-Stack Platforms.", "Scalable Architectures."];
+        let i = 0; let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.querySelector('.typing-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 80);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.querySelector('.typing-text').innerHTML = word.join("");
+                } else {
+                    i = (i + 1) % words.length;
+                    typingEffect();
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 40);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        /* --- 5. Intersection Observer (Scroll Animations) --- */
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        /* --- 6. Scroll Progress --- */
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("scroll-progress").style.width = `${(winScroll / height) * 100}%`;
+        });
+
+        /* --- 7. Initialize Vanilla Tilt --- */
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
         });
     </script>
 </body>
