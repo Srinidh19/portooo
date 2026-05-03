@@ -1,288 +1,196 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinidh Sahadev Akula | Premium Portfolio</title>
+    <title>Srinidh Sahadev Akula | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Premium Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Clean, readable system-like font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Fluid Cursor -->
-    <div class="cursor" id="cursor"></div>
-
-    <!-- Animated Aurora Background -->
-    <div class="aurora-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-progress" id="scroll-progress"></div>
-
     <nav>
-        <div class="nav-container reveal">
-            <a href="#home" class="logo">Srinidh<span class="dot">.</span></a>
+        <div class="nav-container">
+            <a href="#home" class="logo">Srinidh.</a>
             <div class="nav-links">
-                <a href="#about" class="magnetic-link">About</a>
-                <a href="#skills" class="magnetic-link">Expertise</a>
-                <a href="#projects" class="magnetic-link">Work</a>
-                <a href="#contact" class="magnetic-link">Contact</a>
-                <button id="theme-toggle" class="theme-btn magnetic-link" aria-label="Toggle Dark Mode">
-                    <i class="fa-solid fa-sun"></i>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
                 </button>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
+        <!-- Header / Hero -->
+        <header id="home" class="hero section">
             <div class="hero-content">
-                <div class="pill-badge reveal reveal-delay-1">
-                    <span class="pulse-dot"></span> Open to Opportunities
-                </div>
-                <h1 class="hero-title reveal reveal-delay-2">
-                    Crafting <span class="text-gradient">Intelligent</span><br>
-                    Digital Experiences.
-                </h1>
-                <p class="hero-subtitle reveal reveal-delay-3">
-                    I am Srinidh Sahadev Akula, a B.Tech Engineering Student merging the elegance of Full-Stack Architecture with the power of Machine Learning and IoT.
-                </p>
-                <div class="hero-cta reveal reveal-delay-4">
-                    <a href="#projects" class="btn btn-primary magnetic-btn">Explore Work</a>
-                    <a href="#contact" class="btn btn-secondary magnetic-btn">Get in Touch</a>
+                <h1 class="title">Srinidh Sahadev Akula</h1>
+                <h2 class="subtitle">B.Tech Engineering Student specializing in Full-Stack Software, Machine Learning, and IoT Integrations.</h2>
+                <div class="button-group">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="mailto:akulwarsrinidh@gmail.com" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <!-- About & Timeline -->
-        <section id="about" class="section">
-            <h2 class="section-title reveal">The <span class="text-gradient">Journey</span></h2>
-            <div class="about-grid">
-                <div class="glass-card reveal">
-                    <h3 class="card-title">Design Meets Logic</h3>
-                    <p class="card-text">
-                        I engineer solutions at the intersection of beautiful software and physical reality. Leveraging Design Thinking methodologies—from empathy to rapid prototyping—I build robust systems tailored for human needs.
-                    </p>
-                    <p class="card-text mt-4">
-                        My technical foundation spans smart agricultural IoT, advanced applied mechanics, and real-time computer vision models, ensuring every project is both scalable and impactful.
-                    </p>
+        <!-- About & Education -->
+        <section id="about" class="section bg-alt">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="grid-2">
+                <div class="text-block">
+                    <p>I am an engineering student dedicated to applying technical problem-solving to real-world challenges. Using Design Thinking methodologies, I aim to build systems that are robust and genuinely useful.</p>
+                    <p>My academic and practical work spans software architecture, smart agricultural technology, and applied mechanics, giving me a broad perspective on how software interacts with the physical world.</p>
                 </div>
-                
-                <div class="glass-card reveal reveal-delay-2">
-                    <h3 class="card-title">Academic & Milestones</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <h4>B.Tech Engineering</h4>
-                            <p class="text-accent text-sm">Active</p>
-                            <p class="card-text text-sm mt-2">Specializing in ML, software systems, and mechanics.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <h4>Datathon 2026</h4>
-                            <p class="text-muted text-sm">Participant</p>
-                            <p class="card-text text-sm mt-2">Architected data-driven architectures for complex problems.</p>
-                        </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-graduation-cap icon"></i> Education</h3>
+                    <div class="list-item">
+                        <h4>Bachelor of Technology (B.Tech)</h4>
+                        <p class="text-light">Currently Pursuing</p>
+                        <p>Focus: Software systems, Machine Learning, and Applied Mechanics.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Expertise Section -->
+        <!-- Technical Skills -->
         <section id="skills" class="section">
-            <h2 class="section-title reveal">Core <span class="text-gradient">Expertise</span></h2>
-            <div class="skills-container">
-                <div class="glass-card reveal">
-                    <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
-                    <h3 class="card-title">Software Engineering</h3>
-                    <p class="card-text text-sm mb-4">Building fluid, full-stack applications with robust backend logic.</p>
-                    <div class="tech-tags">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Software Dev</h3>
+                    <div class="tags">
                         <span class="tag">Python</span>
                         <span class="tag">JavaScript</span>
                         <span class="tag">Flask</span>
+                        <span class="tag">Full-Stack</span>
                     </div>
                 </div>
-                <div class="glass-card reveal reveal-delay-2">
-                    <div class="icon-wrapper"><i class="fa-solid fa-brain"></i></div>
-                    <h3 class="card-title">Machine Learning</h3>
-                    <p class="card-text text-sm mb-4">Training intelligent models for real-world computer vision tasks.</p>
-                    <div class="tech-tags">
+                <div class="card">
+                    <h3>AI & Data</h3>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
                         <span class="tag">YOLOv8</span>
                         <span class="tag">XGBoost</span>
-                        <span class="tag">EfficientNet</span>
+                        <span class="tag">Computer Vision</span>
                     </div>
                 </div>
-                <div class="glass-card reveal reveal-delay-3">
-                    <div class="icon-wrapper"><i class="fa-solid fa-microchip"></i></div>
-                    <h3 class="card-title">Applied Hardware</h3>
-                    <p class="card-text text-sm mb-4">Bridging the digital and physical worlds through embedded systems.</p>
-                    <div class="tech-tags">
-                        <span class="tag">IoT Integration</span>
+                <div class="card">
+                    <h3>Engineering</h3>
+                    <div class="tags">
+                        <span class="tag">IoT Integrations</span>
                         <span class="tag">Applied Mechanics</span>
+                        <span class="tag">Design Thinking</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Work Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title reveal">Selected <span class="text-gradient">Work</span></h2>
-            <div class="projects-grid">
+        <!-- Projects -->
+        <section id="projects" class="section bg-alt">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+            </div>
+            <div class="grid-3">
                 
-                <div class="project-card reveal">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">AgroSense</h3>
-                            <a href="#" class="magnetic-link"><i class="fa-brands fa-github text-xl"></i></a>
-                        </div>
-                        <p class="card-text mb-4">A smart agriculture ecosystem utilizing IoT and Computer Vision. Engineered for drone-based crop health telemetry and real-time leaf disease diagnosis.</p>
-                        <div class="tech-tags">
-                            <span class="tag">YOLOv8</span>
-                            <span class="tag">IoT</span>
-                            <span class="tag">Python</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-leaf icon-large"></i>
+                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <h3>AgroSense</h3>
+                    <p>A smart agriculture system utilizing IoT and Computer Vision for drone-based crop health monitoring and real-time leaf disease diagnosis.</p>
+                    <div class="tags">
+                        <span class="tag">YOLOv8</span>
+                        <span class="tag">IoT</span>
+                        <span class="tag">Python</span>
                     </div>
                 </div>
 
-                <div class="project-card reveal reveal-delay-2">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">DigiMess</h3>
-                            <a href="#" class="magnetic-link"><i class="fa-brands fa-github text-xl"></i></a>
-                        </div>
-                        <p class="card-text mb-4">A high-throughput hostel dining management platform integrating QR-based attendance protocols and live crowd monitoring algorithms.</p>
-                        <div class="tech-tags">
-                            <span class="tag">Flask</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Full-Stack</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-utensils icon-large"></i>
+                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <h3>DigiMess</h3>
+                    <p>A hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms.</p>
+                    <div class="tags">
+                        <span class="tag">Flask</span>
+                        <span class="tag">JavaScript</span>
                     </div>
                 </div>
 
-                <div class="project-card reveal reveal-delay-3">
-                    <div class="project-content">
-                        <div class="project-header">
-                            <h3 class="project-title">TrustGuard</h3>
-                            <a href="#" class="magnetic-link"><i class="fa-brands fa-github text-xl"></i></a>
-                        </div>
-                        <p class="card-text mb-4">A multi-modal machine learning prototype built to parse and verify the authenticity of text, images, and videos across digital commerce networks.</p>
-                        <div class="tech-tags">
-                            <span class="tag">ML Models</span>
-                            <span class="tag">Data Analysis</span>
-                        </div>
+                <div class="card project-card">
+                    <div class="project-header">
+                        <i class="fa-solid fa-shield-check icon-large"></i>
+                        <a href="#" class="icon-link"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <h3>TrustGuard</h3>
+                    <p>A multi-modal machine learning prototype designed to analyze and verify the authenticity of text, images, and videos for e-commerce.</p>
+                    <div class="tags">
+                        <span class="tag">ML Models</span>
+                        <span class="tag">Data Analysis</span>
                     </div>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="contact-glass reveal">
-                <h2 class="contact-title">Let's create something <span class="text-gradient">beautiful.</span></h2>
-                <p class="card-text mb-8 text-lg">Currently accepting inquiries for Datathon teaming, collaborations, and internships.</p>
-                <a href="mailto:akulwarsrinidh@gmail.com" class="btn btn-primary magnetic-btn text-lg">
-                    Say Hello <i class="fa-solid fa-paper-plane ml-2"></i>
-                </a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. Designed with precision.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Get in Touch</h2>
+            <p>Open for collaborations, Datathon teams, and internships.</p>
+            <a href="mailto:akulwarsrinidh@gmail.com" class="email-link">akulwarsrinidh@gmail.com</a>
+        </div>
+        <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula.</p>
     </footer>
 
-    <!-- Interactive JS -->
     <script>
-        /* --- 1. Fluid Custom Cursor --- */
-        const cursor = document.getElementById("cursor");
-        let mouseX = 0, mouseY = 0;
-        let cursorX = 0, cursorY = 0;
-
-        window.addEventListener("mousemove", (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        // Smooth trailing animation using requestAnimationFrame
-        function animateCursor() {
-            let distX = mouseX - cursorX;
-            let distY = mouseY - cursorY;
-            cursorX += distX * 0.2; // Adjust speed (0.1 to 1)
-            cursorY += distY * 0.2;
-            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        // Cursor scaling on interactive elements
-        const interactiveElements = document.querySelectorAll('a, button, .magnetic-btn, .tag');
-        interactiveElements.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-        });
-
-        /* --- 2. Magnetic Elements (Buttons & Links) --- */
-        const magneticElements = document.querySelectorAll('.magnetic-btn, .magnetic-link');
-        
-        magneticElements.forEach((elem) => {
-            elem.addEventListener("mousemove", (e) => {
-                const pos = elem.getBoundingClientRect();
-                const x = e.clientX - pos.left - pos.width / 2;
-                const y = e.clientY - pos.top - pos.height / 2;
-                
-                elem.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-            });
-
-            elem.addEventListener("mouseleave", () => {
-                elem.style.transform = `translate(0px, 0px)`;
-            });
-        });
-
-        /* --- 3. Scroll Reveal Animations --- */
-        const revealElements = document.querySelectorAll('.reveal');
-        
-        const revealOptions = {
-            threshold: 0.15,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, revealOptions);
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-        /* --- 4. Scroll Progress Bar --- */
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            document.getElementById("scroll-progress").style.width = `${(winScroll / height) * 100}%`;
-        });
-
-        /* --- 5. Theme Toggle --- */
+        // Theme Toggle Logic
         const themeBtn = document.getElementById('theme-toggle');
         const themeIcon = themeBtn.querySelector('i');
         
+        // Load saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+
         themeBtn.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             
             document.documentElement.setAttribute('data-theme', newTheme);
-            themeIcon.className = newTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if(theme === 'dark') {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
