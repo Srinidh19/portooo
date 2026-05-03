@@ -1,87 +1,277 @@
-<!-- Navigation -->
-<nav>
-    <div class="nav-container">
-        <a href="#home" class="logo">SSA<span>.</span></a>
-        <div class="nav-links">
-            <a href="#about" class="nav-item">About</a>
-            <a href="#skills" class="nav-item">Skills</a>
-            <a href="#projects" class="nav-item">Work</a>
-            <a href="#contact" class="btn-nav">Let's Talk</a>
-            <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
-        </div>
-    </div>
-</nav>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinidh Sahadev Akula | Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a modern tech look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
 
-<main>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="badge fade-in">Available for Internships 2026</div>
-            <h1 class="hero-title fade-in">Srinidh Sahadev <span class="text-gradient">Akula</span></h1>
-            <p class="hero-subtitle fade-in">Engineering Student & Full-Stack Developer specializing in <strong>Machine Learning</strong> and <strong>IoT Systems</strong>.</p>
-            <div class="hero-cta fade-in">
-                <a href="#projects" class="btn btn-primary">Explore My Work</a>
-                <a href="#about" class="btn btn-outline">Read Story</a>
-            </div>
-        </div>
-    </section>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Skills Grid -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-label">Expertise</h2>
-            <h3 class="section-main-title">Technical Arsenal</h3>
-            <div class="skills-wrapper">
-                <div class="skill-box">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <h4>Development</h4>
-                    <p>Python, JavaScript, Flask, Full-Stack Architecture</p>
-                </div>
-                <div class="skill-box">
-                    <i class="fa-solid fa-microchip"></i>
-                    <h4>AI & IoT</h4>
-                    <p>YOLOv8, Computer Vision, MQTT, Embedded Systems</p>
-                </div>
-                <div class="skill-box">
-                    <i class="fa-solid fa-compass-drafting"></i>
-                    <h4>Engineering</h4>
-                    <p>Applied Mechanics, Materials Science, Design Thinking</p>
+    <!-- Navigation -->
+    <header class="glass-nav">
+        <div class="nav-container">
+            <a href="#home" class="logo">SSA<span class="text-accent">.</span></a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Arsenal</a>
+                <a href="#projects">Work</a>
+                <a href="#contact" class="btn btn-sm btn-outline">Let's Talk</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-glow"></div>
+            <div class="container hero-content reveal">
+                <div class="badge">B.Tech Engineering</div>
+                <h1 class="hero-title">Srinidh Sahadev <span class="text-gradient">Akula</span></h1>
+                <h2 class="hero-typing">
+                    Building <span class="typing-text"></span><span class="cursor">&nbsp;</span>
+                </h2>
+                <p class="hero-subtitle">Bridging the gap between Full-Stack Architecture, Machine Learning (YOLOv8, XGBoost), and Real-World Hardware Integration.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-label">Portfolio</h2>
-            <h3 class="section-main-title">Featured Engineering Work</h3>
-            <div class="projects-modern-grid">
-                <!-- Project 1 -->
-                <div class="project-glass-card fade-in">
-                    <div class="project-image-placeholder">AgroSense</div>
-                    <div class="project-info">
-                        <span class="project-tag">AI + IoT</span>
-                        <h4>Smart Agriculture System</h4>
-                        <p>Drone-based crop health monitoring using YOLOv8 for real-time diagnosis.</p>
-                        <div class="project-meta">
-                            <span>Python</span> • <span>IoT</span>
-                        </div>
+        <!-- About Section -->
+        <section id="about" class="section bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Academic Journey</span>
+                    <h2 class="section-title">Design Thinking in Action</h2>
+                </div>
+                <div class="about-grid reveal">
+                    <div class="about-text">
+                        <p>I apply technical problem-solving to real-world challenges. By utilizing Design Thinking methodologies—from empathy and ideation to prototyping and testing—I build systems that are robust and user-centric.</p>
+                        <p>Whether I'm analyzing applied mechanics or training an EfficientNet computer vision model, my focus remains on scalable, engineered impact.</p>
                     </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="project-glass-card fade-in">
-                    <div class="project-image-placeholder">DigiMess</div>
-                    <div class="project-info">
-                        <span class="project-tag">Full-Stack</span>
-                        <h4>Mess Management</h4>
-                        <p>QR-based attendance and live crowd monitoring platform for campus dining.</p>
-                        <div class="project-meta">
-                            <span>Flask</span> • <span>JS</span>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item glass-panel">
+                            <div class="timeline-dot"></div>
+                            <h4>Bachelor of Technology (B.Tech)</h4>
+                            <p class="text-muted"><i class="fa-solid fa-graduation-cap"></i> Currently Pursuing</p>
+                        </div>
+                        <div class="timeline-item glass-panel">
+                            <div class="timeline-dot"></div>
+                            <h4>Datathon 2026</h4>
+                            <p class="text-muted"><i class="fa-solid fa-trophy"></i> Participant</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Expertise</span>
+                    <h2 class="section-title">Technical Arsenal</h2>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card glass-panel reveal">
+                        <i class="fa-solid fa-code skill-icon"></i>
+                        <h3>Software Architecture</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                    </article>
+                    
+                    <article class="skill-card glass-panel reveal">
+                        <i class="fa-solid fa-brain skill-icon"></i>
+                        <h3>AI & Data</h3>
+                        <div class="tech-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">XGBoost</span>
+                            <span class="tag">EfficientNet</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card glass-panel reveal">
+                        <i class="fa-solid fa-microchip skill-icon"></i>
+                        <h3>Applied Engineering</h3>
+                        <div class="tech-tags">
+                            <span class="tag">IoT Integration</span>
+                            <span class="tag">Applied Mechanics</span>
+                            <span class="tag">Analytical Chemistry</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Portfolio</span>
+                    <h2 class="section-title">Featured Engineering Work</h2>
+                </div>
+                <div class="projects-grid">
+                    
+                    <!-- AgroSense -->
+                    <article class="project-card glass-panel reveal">
+                        <div class="card-header">
+                            <i class="fa-solid fa-drone project-icon"></i>
+                            <a href="#" class="card-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title">AgroSense</h3>
+                        <p class="project-desc">Smart agriculture system utilizing IoT and Computer Vision for drone-based crop health monitoring and real-time leaf disease diagnosis.</p>
+                        <div class="tech-tags">
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </article>
+
+                    <!-- DigiMess -->
+                    <article class="project-card glass-panel reveal">
+                        <div class="card-header">
+                            <i class="fa-solid fa-qrcode project-icon"></i>
+                            <a href="#" class="card-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title">DigiMess</h3>
+                        <p class="project-desc">A comprehensive hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Flask</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                    </article>
+
+                    <!-- TrustGuard -->
+                    <article class="project-card glass-panel reveal">
+                        <div class="card-header">
+                            <i class="fa-solid fa-shield-halved project-icon"></i>
+                            <a href="#" class="card-link"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <h3 class="project-title">TrustGuard</h3>
+                        <p class="project-desc">Multi-modal fake review detection prototype built to analyze text, images, and videos for authenticity across e-commerce platforms.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-box glass-panel reveal">
+                    <h2>Ready to Build the Future?</h2>
+                    <p>Currently open for collaborations, Datathon teaming, and engineering internships.</p>
+                    <a href="mailto:akulwarsrinidh@gmail.com" class="btn btn-primary contact-link">
+                        <i class="fa-solid fa-envelope"></i> akulwarsrinidh@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. Engineered with precision.</p>
         </div>
-    </section>
-</main>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeBtn.querySelector('i');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'dark'; // Defaulting to dark for tech vibe
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateIcon(currentTheme);
+
+        themeBtn.addEventListener('click', () => {
+            let theme = htmlElement.getAttribute('data-theme');
+            let newTheme = theme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("scroll-progress").style.width = (winScroll / height) * 100 + "%";
+        });
+
+        // Typing Effect
+        const words = ["Machine Learning Models.", "Smart IoT Systems.", "Full-Stack Applications.", "Robust Engineering Solutions."];
+        let i = 0; let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            const loopTyping = () => {
+                if (word.length > 0) {
+                    document.querySelector('.typing-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            const loopDeleting = () => {
+                if (word.length > 0) {
+                    word.pop();
+                    document.querySelector('.typing-text').innerHTML = word.join("");
+                } else {
+                    i = (i + 1) % words.length;
+                    typingEffect();
+                    return;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+        typingEffect();
+
+        // Scroll Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
