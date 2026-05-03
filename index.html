@@ -1,285 +1,87 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinidh Sahadev Akula | Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-</head>
-<body>
+<!-- Navigation -->
+<nav>
+    <div class="nav-container">
+        <a href="#home" class="logo">SSA<span>.</span></a>
+        <div class="nav-links">
+            <a href="#about" class="nav-item">About</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#projects" class="nav-item">Work</a>
+            <a href="#contact" class="btn-nav">Let's Talk</a>
+            <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </div>
+</nav>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scroll-progress"></div>
-
-    <nav>
-        <div class="nav-container">
-            <a href="#home" class="logo">SSA.</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <!-- Dark Mode Toggle -->
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
+<main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="badge fade-in">Available for Internships 2026</div>
+            <h1 class="hero-title fade-in">Srinidh Sahadev <span class="text-gradient">Akula</span></h1>
+            <p class="hero-subtitle fade-in">Engineering Student & Full-Stack Developer specializing in <strong>Machine Learning</strong> and <strong>IoT Systems</strong>.</p>
+            <div class="hero-cta fade-in">
+                <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                <a href="#about" class="btn btn-outline">Read Story</a>
             </div>
         </div>
-    </nav>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="hero-content fade-in">
-                <p class="greeting"><i class="fa-solid fa-terminal" style="color: var(--primary);"></i> Hello, World! I'm</p>
-                <h1 class="hero-title">Srinidh Sahadev Akula</h1>
-                <h2 class="hero-typing">
-                    I build <span class="typing-text"></span><span class="cursor">&nbsp;</span>
-                </h2>
-                <p class="hero-subtitle">B.Tech Engineering Student bridging the gap between Full-Stack Architecture, Machine Learning, and Real-World Hardware Integration.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    <!-- Skills Grid -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-label">Expertise</h2>
+            <h3 class="section-main-title">Technical Arsenal</h3>
+            <div class="skills-wrapper">
+                <div class="skill-box">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h4>Development</h4>
+                    <p>Python, JavaScript, Flask, Full-Stack Architecture</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fa-solid fa-microchip"></i>
+                    <h4>AI & IoT</h4>
+                    <p>YOLOv8, Computer Vision, MQTT, Embedded Systems</p>
+                </div>
+                <div class="skill-box">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                    <h4>Engineering</h4>
+                    <p>Applied Mechanics, Materials Science, Design Thinking</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About & Education Timeline Section -->
-        <section id="about" class="section bg-light">
-            <h2 class="section-title">About & Academic Journey</h2>
-            <div class="about-grid">
-                <div class="about-text fade-in">
-                    <p>
-                        I am an engineering student passionate about applying technical problem-solving to real-world challenges. By utilizing Design Thinking methodologies—from empathy and ideation to prototyping and testing—I build systems that are robust and user-centric. 
-                    </p>
-                    <p>
-                        My expertise spans full-stack software architecture, smart agricultural tech integrations, and advanced applied mechanics analysis. Whether I'm analyzing structural nodes or training a computer vision model, I focus on scalable impact.
-                    </p>
-                </div>
-                
-                <!-- Timeline UI -->
-                <div class="timeline fade-in">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Bachelor of Technology (B.Tech)</h4>
-                            <p class="text-muted"><i class="fa-solid fa-calendar-days"></i> Currently Pursuing</p>
-                            <p>Focusing on software development, machine learning applications, and applied mechanics.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h4>Datathon 2026</h4>
-                            <p class="text-muted"><i class="fa-solid fa-trophy"></i> Participant</p>
-                            <p>Developed data-driven architectures and presentation strategies for complex problem statements.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-label">Portfolio</h2>
+            <h3 class="section-main-title">Featured Engineering Work</h3>
+            <div class="projects-modern-grid">
+                <!-- Project 1 -->
+                <div class="project-glass-card fade-in">
+                    <div class="project-image-placeholder">AgroSense</div>
+                    <div class="project-info">
+                        <span class="project-tag">AI + IoT</span>
+                        <h4>Smart Agriculture System</h4>
+                        <p>Drone-based crop health monitoring using YOLOv8 for real-time diagnosis.</p>
+                        <div class="project-meta">
+                            <span>Python</span> • <span>IoT</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="section-title">Technical Arsenal</h2>
-            <div class="skills-container fade-in">
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-code"></i> Software Dev</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Full-Stack Architecture</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-brain"></i> AI & Data</h3>
-                    <div class="tech-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Computer Vision</span>
-                        <span class="tag">YOLOv8</span>
-                        <span class="tag">XGBoost</span>
-                        <span class="tag">EfficientNet</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fa-solid fa-microchip"></i> Applied Engineering</h3>
-                    <div class="tech-tags">
-                        <span class="tag">IoT Integration</span>
-                        <span class="tag">Applied Mechanics</span>
-                        <span class="tag">Analytical Chemistry</span>
-                        <span class="tag">Design Thinking</span>
+                <!-- Project 2 -->
+                <div class="project-glass-card fade-in">
+                    <div class="project-image-placeholder">DigiMess</div>
+                    <div class="project-info">
+                        <span class="project-tag">Full-Stack</span>
+                        <h4>Mess Management</h4>
+                        <p>QR-based attendance and live crowd monitoring platform for campus dining.</p>
+                        <div class="project-meta">
+                            <span>Flask</span> • <span>JS</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section bg-light">
-            <h2 class="section-title">Featured Engineering Work</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card fade-in">
-                    <div class="card-header">
-                        <div class="card-icon"><i class="fa-solid fa-drone"></i></div>
-                        <div class="card-links"><i class="fa-brands fa-github"></i></div>
-                    </div>
-                    <h3 class="project-title">AgroSense</h3>
-                    <p class="project-desc">A smart agriculture system utilizing IoT and Computer Vision. Designed for drone-based crop health monitoring and real-time leaf disease diagnosis to optimize field management.</p>
-                    <div class="tech-tags">
-                        <span class="tag">YOLOv8</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="card-header">
-                        <div class="card-icon"><i class="fa-solid fa-qrcode"></i></div>
-                        <div class="card-links"><i class="fa-brands fa-github"></i></div>
-                    </div>
-                    <h3 class="project-title">DigiMess</h3>
-                    <p class="project-desc">A comprehensive hostel dining management platform featuring QR-based attendance tracking and live crowd monitoring algorithms to streamline campus operations.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Flask</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Full-Stack</span>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="card-header">
-                        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="card-links"><i class="fa-brands fa-github"></i></div>
-                    </div>
-                    <h3 class="project-title">TrustGuard</h3>
-                    <p class="project-desc">A multi-modal fake review detection prototype built to analyze text, images, and videos for authenticity, ensuring trust across e-commerce platforms.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">Data Analysis</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="contact-box fade-in">
-                <h2>Ready to Build the Future?</h2>
-                <p>Currently open for collaborations, Datathon teaming, and internships. Let's engineer something great.</p>
-                <div class="contact-methods">
-                    <a href="mailto:akulwarsrinidh@gmail.com" class="contact-link">
-                        <i class="fa-solid fa-envelope"></i> akulwarsrinidh@gmail.com
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Srinidh Sahadev Akula. Engineered with precision.</p>
-    </footer>
-
-    <!-- Interactive Scripts -->
-    <script>
-        // 1. Dark Mode Toggle Logic
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = themeToggleBtn.querySelector('i');
-        
-        // Check local storage for theme preference
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        updateIcon(currentTheme);
-
-        themeToggleBtn.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            let newTheme = theme === 'light' ? 'dark' : 'light';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateIcon(newTheme);
-        });
-
-        function updateIcon(theme) {
-            if (theme === 'dark') {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        }
-
-        // 2. Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById("scroll-progress").style.width = scrolled + "%";
-        });
-
-        // 3. Typing Effect Logic
-        const words = ["Software Applications.", "Machine Learning Models.", "IoT Systems.", "Smart Solutions."];
-        let i = 0;
-        let timer;
-
-        function typingEffect() {
-            let word = words[i].split("");
-            var loopTyping = function() {
-                if (word.length > 0) {
-                    document.querySelector('.typing-text').innerHTML += word.shift();
-                } else {
-                    deletingEffect();
-                    return false;
-                }
-                timer = setTimeout(loopTyping, 100);
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = words[i].split("");
-            var loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    document.querySelector('.typing-text').innerHTML = word.join("");
-                } else {
-                    if (words.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
-                    typingEffect();
-                    return false;
-                }
-                timer = setTimeout(loopDeleting, 50);
-            };
-            setTimeout(loopDeleting, 2000); // Wait 2 seconds before deleting
-        }
-        
-        // Start typing effect on load
-        typingEffect();
-
-        // 4. Smooth Scrolling & Fade-in Animations
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
+        </div>
+    </section>
+</main>
